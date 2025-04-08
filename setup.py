@@ -23,7 +23,10 @@ _deps = [
     "sentencepiece",
     "descript-audio-codec",
     "descript-audiotools @ git+https://github.com/descriptinc/audiotools", # temporary fix as long as 0.7.4 is not published
-    "protobuf>=4.0.0"
+    "protobuf>=4.0.0",
+    "pytorch-lightning",
+    "num2words",  # Para converter números em palavras em português
+    "unicodedata2"  # Para lidar com caracteres acentuados
 ]
 
 _extras_dev_deps = [
@@ -38,6 +41,7 @@ _extras_training_deps = [
     "accelerate",
     "evaluate",
     "datasets[audio]>=2.14.5",
+    "phonemizer",  # Para converter texto em fonemas considerando regras do português
 ]
 
 here = os.path.abspath(os.path.dirname(__file__))

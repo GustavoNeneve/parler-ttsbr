@@ -1,0 +1,25 @@
+{
+    "text_encoder": {
+        "model_type": "mt5",
+        "model_name": "unicamp-dl/ptt5-base-portuguese-vocab",
+        "config": {
+            "vocab_size": 32128,
+            "hidden_size": 768
+        }
+    },
+    "audio_encoder": {
+        "model_type": "encodec",
+        "sampling_rate": 24000
+    },
+    "decoder": {
+        "vocab_size": 2049,
+        "num_codebooks": 4,
+        "hidden_size": 1024,
+        "num_attention_heads": 16
+    },
+    "preprocessing": {
+        "text_normalizer": "pt-br",
+        "phonemizer": "espeak",
+        "phonemizer_lang": "pt-br"
+    }
+}
